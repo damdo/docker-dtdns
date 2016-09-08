@@ -8,5 +8,9 @@ Dockerized dtdns client written in Go
 - Efficient - Updates only if ip has changed
 - Flexible - Customizable with a set of parameters
 
+#### HOW IT WORKS
+
+![Alt text](/img/docker-dtdns.svg)
+
 #### USAGE
 
