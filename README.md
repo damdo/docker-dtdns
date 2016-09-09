@@ -10,7 +10,7 @@ Dockerized dtdns client written in Go
 
 #### HOW IT WORKS
 
-![Alt text](img/docker-dtdns.png)
+<img src="img/docker-dtdns.png" height="400px" />
 
 #### USAGE
 
