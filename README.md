@@ -10,6 +10,9 @@ Dockerized dtdns client written in Go
 
 #### HOW IT WORKS
 
+It follows the guidelines defined by the DtDNS specification:
+http://www.dtdns.com/dtsite/updatespec
+
 <img src="img/docker-dtdns.png" height="400px" />
 
 #### USAGE
