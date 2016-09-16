@@ -68,7 +68,6 @@ func updateDns() error {
 	if err != nil {
 		return err
 	}
-	// log.Println(DNS_API_URL + "id=" + DNS_HOSTNAME + "&pw=" + DNS_PASSWD + "")
 	return nil
 }
 
