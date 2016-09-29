@@ -1,5 +1,5 @@
 MAIN=main.go
-IMAGENAME=gobinimg
+IMAGENAME=malgaboy/godtdns
 default: gobin dockerbuild run
 
 gobin: 

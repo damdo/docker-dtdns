@@ -10,8 +10,8 @@ import (
 	"strconv"
 )
 
-var IP_API_URL = Getenv("IP_API_URL", "https://api.ipify.org").(string)
-var DNS_API_URL = Getenv("DNS_API_URL", "https://www.dtdns.com/api/autodns.cfm?").(string)
+var IP_API_URL = Getenv("IP_API_URL", "http://api.ipify.org").(string)
+var DNS_API_URL = Getenv("DNS_API_URL", "http://www.dtdns.com/api/autodns.cfm?").(string)
 var DNS_HOSTNAME = Getenv("DNS_HOSTNAME", "").(string)
 var DNS_PASSWD = Getenv("DNS_PASSWD", "").(string)
 var UPDATE_INTERVAL = Getenv("UPDATE_INTERVAL", "*/1").(string)
