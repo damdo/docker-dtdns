@@ -1,4 +1,4 @@
-## docker-dtdns
+## damdo/docker-dtdns
 
 Dockerized dtdns client written in Go
 
