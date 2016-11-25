@@ -1,13 +1,16 @@
-package main
+package main // import "./"
 
 import (
-	"github.com/robfig/cron"
+	"errors"
 	"io/ioutil"
 	"log"
 	"net/http"
 	"os"
 	"os/signal"
 	"strconv"
+	"strings"
+
+	"github.com/robfig/cron"
 )
 
 var IP_API_URL = Getenv("IP_API_URL", "http://api.ipify.org").(string)
@@ -64,9 +67,17 @@ func getIp() (string, error) {
 }
 
 func updateDns() error {
-	_, err := http.Get(DNS_API_URL + "id=" + DNS_HOSTNAME + "&pw=" + DNS_PASSWD + "")
+	res, err := http.Get(DNS_API_URL + "id=" + DNS_HOSTNAME + "&pw=" + DNS_PASSWD + "")
 	if err != nil {
 		return err
+	}
+	bodyByte, err := ioutil.ReadAll(res.Body)
+	if err != nil {
+		return err
+	}
+	body := string(bodyByte[:])
+	if strings.Contains(body, "failed") || strings.Contains(body, "not valid") {
+		return errors.New("DtDNS server: Hostname not valid or too many req failed")
 	}
 	return nil
 }

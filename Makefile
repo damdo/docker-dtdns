@@ -1,15 +1,17 @@
 MAIN=main.go
-IMAGENAME=malgaboy/godtdns
-default: gobin dockerbuild run
+IMAGENAME=damdo/docker-dtdns
+default: builder
 
-gobin: 
-	GOOS=linux GOARCH=amd64 go build -o $@ -ldflags "-w -s" $(MAIN) 
+builder:
+	docker run --rm -e LDFLAGS='-w -s -extldflags "-static"' -e OUTPUT=gobin  -v $(PWD):/src centurylink/golang-builder
+	make dockerbuild
 
-dockerbuild: 
-	docker build -t $(IMAGENAME) .	
+localbuilder:
+	GOOS=linux GOARCH=amd64 go build -o gobin -ldflags "-w -s" $(MAIN)
+	make dockerbuild
 
-run:
-	docker run --rm -it $(IMAGENAME)
+dockerbuild:
+	docker build -t $(IMAGENAME) .
 
 .PHONY: clean
 clean:
