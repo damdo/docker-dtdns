@@ -1,6 +1,6 @@
 ## damdo/docker-dtdns
 
-Dockerized dtdns client written in Go
+dockerized dtDNS client written in Go
 
 #### FEATURES
 - Lightweight Image - ~3.67MB (FROM scratch, no distro)
@@ -11,6 +11,19 @@ Dockerized dtdns client written in Go
 #### USAGE
 ```sh
 docker run -d -e DNS_HOSTNAME=yourhost.dtdns.domain -e DNS_PASSD=yourpasswd damdo/docker-dtdns
+```
+by default will check ip every minute
+
+##### Optional Parameters
+```sh
+-e UPDATE_INTERVAL=*/n 
+# where n is the amout of minutes between refresh
+
+-e IP_API_URL=ip.api.url 
+# where a different "get current ip" api can be specified
+
+-e DNS_API_URL=new.dnsapi.url 
+# where a different dns service api can be specified
 ```
 
 #### HOW IT WORKS
