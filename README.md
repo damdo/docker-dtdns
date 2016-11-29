@@ -47,3 +47,5 @@ docker run -d -e DNS_HOSTNAME=yourhost.dtdns.domain -e DNS_PASSD=yourpasswd desi
 make localbuilder IMAGENAME=desiredimagename
 docker run -d -e DNS_HOSTNAME=yourhost.dtdns.domain -e DNS_PASSD=yourpasswd desiredimagename
 ```
+
+This project uses third party libraries that are distributed under their own terms (See LICENSE-3RD-PARTY).
