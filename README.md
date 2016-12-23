@@ -18,7 +18,7 @@ by default will check ip every minute
 ##### Optional Parameters
 ```sh
 -e UPDATE_INTERVAL=*/n 
-# where n is the amout of minutes between refresh
+# where n (integer: [1-59]) is the amout of minutes between refresh
 
 -e IP_API_URL=ip.api.url 
 # where a different "get current ip" api can be specified
