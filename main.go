@@ -1,4 +1,4 @@
-package main // import "./"
+package main
 
 import (
 	"errors"

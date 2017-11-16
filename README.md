@@ -38,13 +38,7 @@ http://www.dtdns.com/dtsite/updatespec
 
 ##### In DOCKER building
 ```sh
-make IMAGENAME=desiredimagename
-docker run -d -e DNS_HOSTNAME=yourhost.dtdns.domain -e DNS_PASSD=yourpasswd desiredimagename
-```
-
-##### Local building (go compiler required)
-```sh
-make localbuilder IMAGENAME=desiredimagename
+docker build -t desideredimagename .
 docker run -d -e DNS_HOSTNAME=yourhost.dtdns.domain -e DNS_PASSD=yourpasswd desiredimagename
 ```
 
