@@ -38,7 +38,7 @@ http://www.dtdns.com/dtsite/updatespec
 
 ##### In DOCKER building
 ```sh
-rocker build -t desiredimagename .
+docker build -t desiredimagename .
 docker run -d -e DNS_HOSTNAME=yourhost.dtdns.domain -e DNS_PASSD=yourpasswd desiredimagename
 ```
 
