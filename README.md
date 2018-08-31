@@ -42,4 +42,7 @@ docker build -t desiredimagename .
 docker run -d -e DNS_HOSTNAME=yourhost.dtdns.domain -e DNS_PASSD=yourpasswd desiredimagename
 ```
 
-This project uses third party libraries that are distributed under their own terms (See LICENSE-3RD-PARTY).
+#### LICENSE
+- This project uses third party libraries that are distributed under their own terms. See [`LICENSE-3RD-PARTY`](https://github.com/damdo/docker-dtdns/blob/master/LICENSE-3RD-PARTY)
+- For the rest of it the MIT License (MIT) applies. See [`LICENSE`](https://github.com/damdo/docker-dtdns/blob/master/LICENSE) for more details
+
